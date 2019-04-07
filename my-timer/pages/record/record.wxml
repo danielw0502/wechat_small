@@ -1,0 +1,19 @@
+<view class='content'>
+
+  <view class='recordset'>
+    <scroll-view class='taskrecord'>
+      <view class='textset' wx:for='{{kk}}' wx:for-item='record'>
+        <text class='recordtext'>
+            {{ index+1 }}. {{ record }}
+        </text>
+      </view>
+    </scroll-view>
+  </view>
+  
+  <view class='clr'>
+    <button bindtap='clearrecord' class='clrdata'>
+      清除记录
+    </button>
+  </view>
+
+</view>

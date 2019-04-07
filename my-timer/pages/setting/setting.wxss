@@ -1,0 +1,102 @@
+/* pages/setting/setting.wxss */
+.box{
+  height: 100px;
+  width: 360px;
+  border: 3px solid rgb(252, 212, 36);
+  margin-top: 30px;
+}
+
+.bcg{
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.textset{
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  color: blueviolet;
+}
+.worktimechange .sleeptimechange{
+  margin-top: 20px;
+}
+
+.setbg{
+  margin-left: 260px;
+  margin-top: 40px;
+}
+
+.setring{
+  margin-left: 260px;
+  margin-top: 40px;
+}
+
+.choosebg{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.choosebg .top {
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 50rpx;
+}
+
+.choosebg .top .title{
+  color: #333;
+}
+.choosebg .border {
+  padding: 6rpx;
+  margin-right: 14rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0);
+  transition: .1s ease;
+}
+
+.choosebg .border:last-child {
+  margin-right: 0;
+}
+
+.choosebg .border.active {
+  border: 1rpx solid #f80e1a;
+  transition: .1s ease;
+}
+
+
+.choosebg .bgs {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  overflow: scroll;
+}
+
+.choosebg .bgs image {
+  width: 110rpx;
+  height: 190rpx;
+}
+
+.choosebg .close{
+  flex: 1;
+  padding: 20rpx 0;
+  text-align: center;
+}
+
+.choosebg .close image {
+  width: 64rpx;
+  height: 64rpx;
+}

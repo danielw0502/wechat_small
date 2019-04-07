@@ -1,0 +1,47 @@
+/* pages/record/record.wxss */
+page{
+  background-color: rgb(243, 235, 235);
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recordset{
+  position: absolute;
+  top: 20px;
+  height: 500px;
+  left: 20px;
+  right: 20px;
+  overflow-y: auto;
+}
+
+
+.taskrecord{
+  background: #fff;
+}
+
+.textset{
+  margin-left: 10px;
+}
+
+.recordtext{
+  color: rgb(197, 191, 191);
+}
+
+.clr{
+  position: absolute;
+  height: 80px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+.clrdata{
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #f16c14;
+}

@@ -1,0 +1,54 @@
+<view>
+  
+  <image class='bcg' wx:if="{{bcgImg && bgshow}}" src='{{bcgImg}}' mode='aspectFill'></image>
+  
+  <view class='choosebg' wx:if='{{bgshow}}'>
+      <view class='top'>
+        <view class='title'>更换背景</view>
+        <view class='bgs'>
+          <view class='border {{bcgImgIndex === index ? "active" : ""}}' wx:for='{{bcgImgList}}' wx:key='{{index}}'>
+              <image src='{{item.src}}' catchtap='chooseBcg' data-index='{{index}}' data-src='{{item.src}}'></image>
+          </view>
+        </view>
+      </view>
+      <view class='close' catchtap='hidebg'>
+      <image src='../../image/up-arrow.png'></image>
+    </view>
+  </view>
+
+  <view class='worktime box' wx:if='{{!bgshow}}'>
+  
+    <text class='textset'>工作时长(分钟)</text>
+
+    <slider bindchange='worktimechange'min='0' max='60' value='5' step='1' backgroundColor='#e9e9e9' show-value></slider>
+
+  </view>
+
+  <view class='sleeptime box' wx:if='{{!bgshow}}'>
+
+    <text class='textset'>休息时长(分钟)</text>
+
+    <slider bindchange='sleeptimechange' min='0' max='60' value='3' step='1' backgroundColor='#e9e9e9' show-value></slider>
+
+  </view>
+
+  <view class='indexbg box' wx:if='{{!bgshow}}'>
+  
+    <text class='textset' >主页背景</text>
+
+    <view class='setbg'>
+      <text  catchtap="showbg">选择背景></text>
+    </view>
+    
+  </view>
+
+  <view class='ring box' wx:if='{{!bgshow}}'>
+    <text class='textset'>启动铃声</text>
+
+    <view class='setring'>
+      <text>选择铃声></text>
+    </view>
+
+  </view>
+
+</view>

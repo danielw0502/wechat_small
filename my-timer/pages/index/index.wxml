@@ -1,0 +1,64 @@
+<view>
+  
+
+    <image class='bcg' wx:if="{{bcgImg}}" src='{{bcgImg}}' mode='aspectFill'></image>
+  
+  <view class='content'>
+  
+  <block wx:if="{{disable}}">
+  
+    <view class='task'>{{ inputTaskName }}</view>
+
+    <view class='clock'>
+      <view class='time-box circle'>
+        <view class='track'></view>
+        <view class='left transition-rotate' style='transform: {{ leftTransform }}'></view>
+        <view class='right transition-rotate' style='transform:{{ rightTransform }};opacity: {{rightOpacity}}'></view>
+        <view class='mask' style='opacity: {{ maskOpacity}}'></view>
+        <view class='time-info'>{{ m }}:{{ s }} </view>
+      </view> 
+    </view>
+
+    <view class='line'></view>
+
+    <view class='task-set'>
+      <text class='task-name'>给您的任务取个名字吧:</text><input bindinput="bindTaskName"></input>
+    </view>
+
+
+    <view class='line'></view>
+
+    <view class='setting'>
+
+      <button bindtap='workset' class='workcircle worksetting'>工作</button>
+        
+      <button bindtap='sleepset' class='sleepcircle sleepsetting'>休息</button>
+
+    </view>
+  
+
+  </block>
+
+  <block wx:if="{{ !disable }}">
+
+    <view class='task2'>{{ inputTaskName }}进行中</view>
+
+    <view class='clock2'>
+      <view class='time-box circle'>
+        <view class='track'></view>
+        <view class='left transition-rotate' style='transform: {{ leftTransform }}'></view>
+        <view class='right transition-rotate' style='transform:{{ rightTransform }};opacity: {{rightOpacity}}'></view>
+        <view class='mask' style='opacity: {{ maskOpacity}}'></view>
+        <view class='time-info'>{{ m }}:{{ s }} </view>
+      </view> 
+    </view>
+
+    <view class='finish'>
+      <button bindtap='complete' class='completecircle completeset'>完成</button>
+    </view>
+
+
+  </block>
+  </view>
+
+</view>
